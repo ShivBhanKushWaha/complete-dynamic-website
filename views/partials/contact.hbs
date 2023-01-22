@@ -1,0 +1,34 @@
+<section id="contact_us_section" class="py-5 background1" >
+
+      <div class="container">
+        <div class="row">
+          <h3 class="text-center text-secondary">Contact Us</h3>
+          <div class="col-md-12">
+
+          <form action="/process-contact-form" method="post">
+
+            <div class="mb-3">
+                <label for="emailId" class="form-label">Your Email Address</label>
+                <input name="email" type="text" class="form-control" id="emailId" placeholder="Email">
+              </div>
+              <div class="mb-3">
+                <label for="contactNumber" class="form-label">Your Contact Number</label>
+                <input name="phone" type="number" class="form-control" id="contactNumber" placeholder="Contact number">
+              </div>              
+            </div>
+
+            <div class="form-floating my-2">
+              <textarea name="query" style="height:250px ;" class="form-control" id="queryField"></textarea>
+              <label for="queryField" class="text-center"  >Type your Query</label>
+            </div>
+
+            <div class="container text-center">
+              <button type="submit" class="btn btn-dark">Submit</button>
+            </div>
+           
+          </form>
+
+        </div>
+      </div>
+
+    </section>

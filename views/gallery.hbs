@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    {{>navbar data = details}}
+
+    <section class="py-5">
+      <div class="container-fluid text-center py-2 background4">
+        <h5 class="text-secondary text-center">Here , Full development playlist is available</h5>
+        <div class="row" >
+          {{#each galleries}}
+         
+          <div class="col-md-4 pt-5" >
+            <h5  class="py-2" style="color:blue;">{{this.title}}</h5>
+            <h5 style="color: #FC0022;">{{this.Language}}</h5>
+            <iframe src={{this.link}}></iframe>
+            <h5 class="pt-2" style="color: black;">{{this.type}}</h5>
+          </div>
+              
+          {{/each}}
+        </div>
+      </div>
+    </section>
+
+    {{>footer}}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
+</html>
